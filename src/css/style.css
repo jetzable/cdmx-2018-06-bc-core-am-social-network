@@ -12,11 +12,6 @@ body{
   color: white;
 }
 
-/*.register-box {
-  margin: 0.5px;
-  text-align: -webkit-center;
-}*/
-
 .txt2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
@@ -30,11 +25,6 @@ body{
 }
 
 /*============Formulario=======================*/
-/*.contenedor {
-  width:100%;
-  display: flex;
-  flex-wrap: wrap;
-}*/
 
 .login-form {
   width: 100%;
@@ -77,12 +67,6 @@ body{
   border-color:  white;
 
 }
-
-/*button {
-  display: block;
-  margin: 10px;
-  text-align: -webkit-center;
-}*/
 
 .btn-box {
   text-align: -webkit-center;

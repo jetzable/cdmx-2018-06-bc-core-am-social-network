@@ -14,7 +14,7 @@ body{
       /*background-image: url("../images/");*/
       body{
         background-color: rgba(255, 94, 58, 0.95);
-        font-family: 'roboto';
+        font-family: 'Montserrat';
         font-weight: 700;
         font-size: 2em;
         }
@@ -24,7 +24,7 @@ body{
           /*background-image: url("../images/");*/
         }
       .img-fluid {
-        width: 25%;
+        width: 50%;
       }
   
   .form-inline{
@@ -74,7 +74,7 @@ body{
       width: 25%;
     }
   }
-      .login-form {
+      /*.login-form {
         width: 50%;
     
       }
@@ -82,17 +82,24 @@ body{
       width: 100%;    
       display: block;
       position: absolute;
-    }
+    }*/
   
   
-  /*@media (max-width: 475px) {
+  @media (max-width: 475px) {
     .login-form {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-    }*/
+    }
+
+    @media (max-width: 992px) {
+        .login-form {
+          width: 50%;
+          overflow: auto;
+      
+        }
   
-  .form-control{
+  /*.form-control{
       margin-top: 1em;
       margin-bottom: 0.5em;
       height: 7em;
