@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<title>GarnachApp</title>
@@ -10,10 +10,11 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
 <body>
-
 	<div class="container-fluid">
 	  <div class="row">	
 		<div class="login-form col-sm-8">  
@@ -32,6 +33,16 @@
 						<button id="login-button" class="btn btn-dark">
 							INICIAR SESIÓN
 						</button>
+					</div>	
+					<div class="btn-box col-sm">
+						<button id="twitter-sign-in" class="btn btn-dark btn-sm">
+							Ingresa con <i class="fab fa-twitter-square"></i>
+						</button>	
+					</div>
+					<div class="btn-box col-sm">
+						<button id="github-sign-in" class="btn btn-dark btn-sm">
+							Ingresa con <i class="fab fa-github"></i>
+						</button>	
 					</div>
 					<div class="btn-box col-sm">
 						<button id="google-sign-in" class="btn btn-dark btn-sm">
@@ -64,7 +75,7 @@
 						</a>
 					</div>
 					  <div id="register-button" clas="col">
-						<a class="txt3"  href="newAccount.html" >
+						<a class="txt3"  href="views/newAccount.html" >
 							REGISTRARME
 						</a>
 					</div>	
@@ -83,17 +94,11 @@
 		<footer class="modal-footer">
 			<p>Desarrollada por Copelia, Vianey, Palmidia</p>
 		</footer>
-	
-
-
-
-  <!-- Adding Firebase y Firestore -->
+		
+		<!-- Adding Firebase y Firestore -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <!--<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>-->
-  
-
   <script src="js/index.js"></script>
-  <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>
