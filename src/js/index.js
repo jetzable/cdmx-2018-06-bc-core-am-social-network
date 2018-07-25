@@ -229,6 +229,24 @@ window.signOutUser = () => {
     });
 };
 
-window.deletePost = () => {
-
+window.deletePost = (postToDelete, userPost) => {
+  let user = firebase.auth().currentUser;
+  if (user.email === userPost) {
+    let confirmationToDelete = confirm('¿Estás segurx que quieres eliminar esta publicación?');
+    if (confirmationToDelete === true) {
+      db.collection('posts').doc(postToDelete).delete()
+        .then(() => {
+          alert('¡Tu publicación fue eliminada exitosamente!');
+          printUserPost();
+        })
+        .catch((error) => {
+          console.log(error);
+          alert('Hubo un problema al eliminar tu publicación, por favor intenta nuevamente.');
+        });
+    } else {
+      alert('¡Bien pensado, sigue compartiendo tus garnachas favoritas!');
+    }
+  } else {
+    alert('No puedes eliminar publicaciones de otros garnacheros.');
+  }
 };
