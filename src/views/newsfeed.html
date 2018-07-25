@@ -54,7 +54,7 @@
     
       <!--navbar horizontal-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-          <a class="navbar-brand" href="#">Menú</a>
+          <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,14 +66,15 @@
               <a class="nav-link" href="#">
                   <span class="sr-only">(current)</span>
                 <!--Awesome font "AGREGAR" p/reemplazar palabras (User centricity)-->
-                <i class="fas fa-plus px-3" title="Subir Imagen"></i>
+                <i class="fas fa-user px-3" title="Perfil"></i>
+             
               </a>
             </li>
 
             <li class="nav-item display">
               <a class="nav-link" href="#">
                 <!--Awesome font "CONTACTOS"-->
-                <i class="fas fa-user px-3" title="Amigos"></i>
+                <i class="fas fa-user-friends" title="Amigos"></i>
               </a>
             </li>
 
@@ -83,19 +84,14 @@
                 <i class="fas fa-grin-tongue px-3" title="Me apetece"></i>
               </a>
             </li>
-            <!--Ícono engrane para "OPCIONES" y dropup p/ el sentido del despliegue-->
-            <li class="nav-item dropup display">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
-          
+
+            <li class="nav-item display">
+              <a id="log-out-btn" class="nav-link" href="#">
+                <!--Awesome font "ME APETECE"-->
+                <i class="fas fa-sign-out-alt" title="Salir"></i>
               </a>
-              <!--Opciones del dropdown-->
-              <div class="dropdown-menu px-3" aria-labelledby="navbarDropdown">
-                <a id="log-out-btn" class="dropdown-item">Cerrar sesión</a>
-                <a class="dropdown-item" href="#">Opciones</a>
-                <div class="dropdown-divider"></div>
-              </div>
             </li>
+            <!--Ícono engrane para "OPCIONES" y dropup p/ el sentido del despliegue-->
           </ul>
           <!--Input y botón de búsqueda-->
           <form class="form-inline my-2 my-lg-0">
