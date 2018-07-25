@@ -85,7 +85,7 @@ body{
     }*/
   
   
-  @media (max-width: 475px) {
+  /*@media (max-width: 475px) {
     .login-form {
       width: 100%;
       display: flex;
@@ -97,7 +97,7 @@ body{
           width: 50%;
           overflow: auto;
       
-        }
+        }*/
   
   /*.form-control{
       margin-top: 1em;
