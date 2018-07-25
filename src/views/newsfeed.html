@@ -17,39 +17,37 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <header>
-      <!--Aquí Card para publicar en newsfeed-->
-      <div class="row">
-        <div class="col-sm-12 col-lg-12 mb-4 text-center mt-3">
-          <img src="../images/garnachapp.png" class="img-fluid" alt="LogoGarnachapp">
-        </div>
-      </div>
-    </header>
-    <section>
-      <div class="card border-dark mx-4">
-        <!--Aquí, de ser posible insertar imagen <img class="card-img-left" src="../images/garnachasMuestra.jpg" alt="PuestoTípicoGarnachero">-->
-        <div class="card-body-sm bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 px-1">
-                <textarea class="form-control" aria-label="GarnachApp"></textarea>
-              </div>
-              <div class="col-sm-4 mb-3">
-                <button id="user-post-btn" class="card-body-sm btn btn-warning">Publicar</button>
-              </div>
-              <div class="col-sm-8 text-right">
-                <span class="card-text font-color">
-                  <!--Aquí awesome font de google para "Me apetece" y "Compartir"-->
-                  <i class="fas fa-grin-tongue mr-2" title="Me apetece"></i>
-                  <i class="fas fa-share ml-2" title="Compartir"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+ <div class="container-fluid">
+   <header>
+     <!--Aquí Card para publicar en newsfeed-->
+     <div class="row">
+       <div class="col-sm-12 col-lg-12 mb-4 text-center mt-3">
+         <img src="../images/garnachapp.png" class="img-fluid" alt="LogoGarnachapp">
+       </div>
+     </div>
+ </div>
+ </header>
+ <section id="post-section">
+   <div class="card border-dark mx-4">
+     <!--Aquí, de ser posible insertar imagen <img class="card-img-left" src="../images/garnachasMuestra.jpg" alt="PuestoTípicoGarnachero">-->
+     <div class="card-body-sm bg-dark">
+       <div class="container">
+         <div class="row">
+           <div class="col-sm-12 px-1">
+             <textarea id="user-post" class="form-control" aria-label="GarnachApp"></textarea>
+           </div>
+           <div class="col-sm-4 mb-3">
+             <button id="user-post-btn" class="card-body-sm btn btn-warning">Publicar</button>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <section id="list-post" class="col-sm-8 text-center">
+    
+     </section>
+ </section>
+
 
     
       <!--navbar horizontal-->
