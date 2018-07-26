@@ -308,3 +308,23 @@ window.passwordReset = (userEmail) => {
       console.log(error);
     });
 };
+
+window.createUserProfileWithEmail = (name, email, location) => {
+  db.collection('users').add({
+    userName: name,
+    userEmail: email,
+    city: location
+  })
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
+};
+
+window.updateInRealTime = () => {
+  let posts = document.getElementById('list-post');
+  let dbRef = firebase.database().ref();
+  dbRef.on('value', snap => posts.innerHTML += snap.val());
+};

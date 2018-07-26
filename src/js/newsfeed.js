@@ -31,6 +31,7 @@ const printUserPost = () => {
     });
 };
 printUserPost();
+updateInRealTime();
 
 document.getElementById('user-post-btn').addEventListener('click', event => {
   event.preventDefault();

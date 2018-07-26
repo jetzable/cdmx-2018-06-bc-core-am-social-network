@@ -1,4 +1,6 @@
 initializeFirebase();
+let db = firebase.firestore();
+
 document.getElementById('new-account-button').addEventListener('click', event => {
   event.preventDefault();
   let newEmail = document.getElementById('email-field').value;
@@ -6,4 +8,5 @@ document.getElementById('new-account-button').addEventListener('click', event =>
   let newUserName = document.getElementById('name-field').value;
   let newUserLocation = document.getElementById('city-field').value;
   newAccount(newEmail, newPassword);
+  createUserProfileWithEmail(newUserName, newEmail, newUserLocation);
 });
