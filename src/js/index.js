@@ -16,6 +16,7 @@ window.newAccount = (email, password) => {
       verifyAccountWithEmail();
       alert('Se ha enviado un correo a tu email para verificar tu cuenta.');
       signOutUser();
+      location.href = ('../index.html');
     })
     .catch((error) => {
       // Handle Errors here.
@@ -289,6 +290,21 @@ window.likePost = (postId, userAddingLike) => {
       printUserPost();
     })
     .catch((error) => {
+      console.log(error);
+    });
+};
+
+window.passwordReset = (userEmail) => {
+  let auth = firebase.auth();
+  let emailAddress = userEmail;
+
+  auth.sendPasswordResetEmail(emailAddress)
+    .then(() => {
+      // Email sent.
+      alert('Se ha enviado un mail a tu correo para poder recuperar tu contraseña.');
+      location.href = ('../index.html');
+    }).catch((error) => {
+      // An error happened.
       console.log(error);
     });
 };
