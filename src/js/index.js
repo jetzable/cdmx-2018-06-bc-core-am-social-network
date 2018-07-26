@@ -325,6 +325,6 @@ window.createUserProfileWithEmail = (name, email, location) => {
 
 window.updateInRealTime = () => {
   let posts = document.getElementById('list-post');
-  let dbRef = firebase.database().ref();
+  let dbRef = firebase.database().ref().child('posts');
   dbRef.on('value', snap => posts.innerHTML += snap.val());
 };

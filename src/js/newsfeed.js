@@ -1,5 +1,8 @@
 initializeFirebase();
 let db = firebase.firestore();
+let dbSettings = {timestampsInSnapshots: true};
+db.settings(dbSettings);
+updateInRealTime();
 
 const printUserPost = () => {
   const postList = db.collection('posts');
@@ -31,7 +34,6 @@ const printUserPost = () => {
     });
 };
 printUserPost();
-updateInRealTime();
 
 document.getElementById('user-post-btn').addEventListener('click', event => {
   event.preventDefault();
