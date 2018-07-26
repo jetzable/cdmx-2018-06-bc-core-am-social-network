@@ -60,6 +60,8 @@ window.loginUser = (email, password) => {
         alert('Por favor, verifica tu contraseña.');
       } else if (errorCode === 'auth/user-not-found' || errorCode === 'auth/invalid-email' || errorCode === 'auth/argument-error') {
         alert('Por favor verifica tu usuario o Registrate para poder iniciar sesión.');
+      } else if (errorCode === 'auth/account-exists-with-different-credential') {
+        alert('El correo ya ha sido registrado');
       }
     });
 };
@@ -86,7 +88,9 @@ window.googleUserLogin = () => {
       let email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       let credential = error.credential;
-      console.log(errorCode);
+      if (errorCode === 'auth/account-exists-with-different-credential') {
+        alert('El correo ya ha sido registrado');
+      }
       // ...
     });
 };
@@ -111,7 +115,9 @@ window.facebookUserLogin = () => {
       let email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       let credential = error.credential;
-      console.log(errorCode);
+      if (errorCode === 'auth/account-exists-with-different-credential') {
+        alert('El correo ya ha sido registrado');
+      }
       // ...
     });
 };
@@ -135,7 +141,9 @@ window.twitterUserLogin = () => {
       let email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       let credential = error.credential;
-      console.log(errorCode);
+      if (errorCode === 'auth/account-exists-with-different-credential') {
+        alert('El correo ya ha sido registrado');
+      }
       // ...
     });
 };
@@ -159,7 +167,9 @@ window.githubUserLogin = () => {
       let email = error.email;
       // The firebase.auth.AuthCredential type that was used.
       let credential = error.credential;
-      console.log(errorCode);
+      if (credential === 'auth/account-exists-with-different-credential') {
+        alert('El correo ya ha sido registrado');
+      }
       // ...
     });
 };
