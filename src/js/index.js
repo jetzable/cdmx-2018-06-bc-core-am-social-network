@@ -200,8 +200,8 @@ window.addingDataToNewsfeed = (input) => {
         userEmail: email,
         profilePhoto: photoURL,
         userID: uid,
-        time: postTime
-
+        time: postTime,
+        likes: []
       })
         .then((docRef) => {
           console.log('Document written with ID: ', docRef.id);
@@ -249,4 +249,36 @@ window.deletePost = (postToDelete, userPost) => {
   } else {
     alert('No puedes eliminar publicaciones de otros garnacheros.');
   }
+};
+
+window.likePost = (postId, userAddingLike) => {
+  db.collection('posts').doc(postId).get()
+    .then((post) => {
+      let newLike = post.data().likes;
+      if (post.data().likes.length === 0) {
+        newLike.push(`${userAddingLike}`);
+        db.collection('posts').doc(postId).update({
+          likes: newLike
+        });
+      } else {
+        for (let i = 0; i < post.data().likes.length; i++) {
+          if (post.data().likes[i] === userAddingLike) {
+            newLike.splice(i, 1);
+            db.collection('posts').doc(postId).update({
+              likes: newLike
+            });
+          } else {
+            newLike.push(`${userAddingLike}`);
+            console.log(newLike);
+            db.collection('posts').doc(postId).update({
+              likes: newLike
+            });
+          }
+        }
+      }
+      printUserPost();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };
