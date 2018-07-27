@@ -204,7 +204,7 @@ window.addingDataToNewsfeed = (input) => {
       let email = user.email;
       let photoURL = user.photoURL;
       let uid = user.uid;
-      let postTime = `${new Date()}`;
+      let postTime = firebase.firestore.FieldValue.serverTimestamp();
       db.collection('posts').add({
         username: displayName,
         postInput: input,
@@ -323,8 +323,35 @@ window.createUserProfileWithEmail = (name, email, location) => {
     });
 };
 
-window.updateInRealTime = () => {
-  let posts = document.getElementById('list-post');
-  let dbRef = firebase.database().ref().child('posts');
-  dbRef.on('value', snap => posts.innerHTML += snap.val());
+window.editPost = (postId, postUserID) => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user.email === postUserID) {
+      createUpdateArea(postId);
+    } else {
+      alert('No puedes modificar publicaciones de otros garnacheros');
+    }
+  });
 };
+
+window.savePostEdition = (postId) => {
+  let newPostInput = document.getElementById(`post${postId}`).value;
+  db.collection('posts').doc(postId).get()
+    .then(post => {
+      db.collection('posts').doc(postId).update({
+        postInput: newPostInput
+      })
+        .then(result => {
+          printUserPost();
+        })
+        .catch(error => {
+          console.log(error);
+          alert('No pudimos editar tu publicación, intentalo de nuevo.');
+        });
+    });
+};
+
+// window.updateInRealTime = () => {
+//   let printedPosts = document.getElementById('list-post');
+//   const dbRef = firebase.database().ref().child('printedPosts');
+//   dbRef.onSnapshot(snap => printedPosts.innerHTML = snap.val());
+// };  
