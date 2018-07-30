@@ -1,4 +1,3 @@
-// JS sin interacción del DOM
 // Initialize Firebase //
 window.initializeFirebase = () => {
   firebase.initializeApp({
@@ -198,6 +197,7 @@ window.verifyLoginUser = () => {
 };
 
 // Agregando funcionalidad de popover para información de usuario
+// Agregando funcionalidad de popover para información de usuario
 window.addingProfilePopover = () => {
   const displayName = '';
   const email = '';
@@ -221,6 +221,7 @@ window.addingProfilePopover = () => {
   profileButton.innerHTML = printProfileButton;
 };
 
+////////////////
 window.addingDataToNewsfeed = (input) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {

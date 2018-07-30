@@ -2,11 +2,34 @@ initializeFirebase();
 let db = firebase.firestore();
 let dbSettings = { timestampsInSnapshots: true };
 db.settings(dbSettings);
-addingProfilePopover();
-$(function() {
-  $('[data-toggle="popover"]').popover();
-}); 
 
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in.
+    let displayName = user.displayName;
+    let email = user.email;
+    let emailVerified = user.emailVerified;
+    let photoURL = user.photoURL;
+    let isAnonymous = user.isAnonymous;
+    let uid = user.uid;
+    let providerData = user.providerData;
+    profilePopover(user);
+  } else {
+    location.href = ('../index.html');
+  }
+});
+
+const profilePopover = (user) => {
+  $(() => {
+    $('[data-toggle="popover"]').popover();
+  });
+  const profileButton = document.getElementById('popover-button');
+  const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content='${user.email}'>
+      <span class="sr-only">(current)</span>
+      <i class="fas fa-user px-3" title="Perfil"></i>
+      </button>`;
+  profileButton.innerHTML = printProfileButton;
+};
 // updateInRealTime();
 
 const printUserPost = () => {
@@ -50,17 +73,17 @@ document.getElementById('user-post-btn').addEventListener('click', event => {
   document.getElementById('user-post').value = '';
 });
 
-document.getElementById('log-out-btn').addEventListener('click', event => {
-  event.preventDefault();
-  signOutUser();
-  alert('¡Hasta la próxima Garnacha!');
-  location.href = ('../index.html');
-});
-
 const createUpdateArea = (postID) => {
   db.collection('posts').doc(postID).get()
     .then(post => {
       document.getElementById(postID).innerHTML = `<textarea class="form-control form-textarea" id="post${postID}" rows="4">${post.data().postInput}</textarea><div class="ml-auto text-right"><button class="btn btn-warning" onclick="savePostEdition('${postID}')"><i class="fas fa-save"></i></button><div>`;
     })
     .catch(error => console.log(error));
-}; 
+};
+
+document.getElementById('log-out-btn').addEventListener('click', event => {
+  event.preventDefault();
+  signOutUser();
+  alert('¡Hasta la próxima Garnacha!');
+  location.href = ('../index.html');
+});
