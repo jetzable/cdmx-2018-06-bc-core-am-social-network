@@ -112,13 +112,13 @@ Por qué la usará? Motivaciones del usuario]**
 
 UX Sketching
 
-a) [Ideal] (Pendiente)
+a) Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.JPG)
 
 b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
                               ![Login Web](images/web.gif) 
                               ![NewsFeed](images/newsfeed.jpg)
 
-               Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.JPG)          
+                         
 
 ##Tech
 Desarrollado con:
