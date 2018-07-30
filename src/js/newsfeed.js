@@ -6,6 +6,7 @@ addingProfilePopover();
 $(function() {
   $('[data-toggle="popover"]').popover();
 }); 
+
 // updateInRealTime();
 
 const printUserPost = () => {
