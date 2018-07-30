@@ -1,3 +1,4 @@
+// JS sin interacción del DOM
 // Initialize Firebase //
 window.initializeFirebase = () => {
   firebase.initializeApp({
@@ -207,18 +208,26 @@ window.verifyLoginUser = () => {
 
 // Agregando funcionalidad de popover para información de usuario
 window.addingProfilePopover = () => {
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      const profileButton = document.getElementById('popover-button');
-      const printProfileButton = `<button id="popover-button" class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="${user.displayName}">
+  const displayName = '';
+  const email = '';
+  const photoURL = '';
+  const userDinamic = firebase.auth().currentUser;
+  if (userDinamic !== null) {
+    displayName = userDinamic.displayName;
+    email = userDinamic.mail;
+    photoURL = user.photoURL;
+    console.log(email);
+  } else {
+    console.log('usuario vacio');
+  }
+
+
+  const profileButton = document.getElementById('popover-button');
+  const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="${displayName}">
       <span class="sr-only">(current)</span>
       <i class="fas fa-user px-3" title="Perfil"></i>
       </button>`;
-      profileButton.innerHTML = printProfileButton;  
-    } else {
-      console.log('nooo');
-    }
-  });
+  profileButton.innerHTML = printProfileButton;
 };
 
 window.addingDataToNewsfeed = (input) => {

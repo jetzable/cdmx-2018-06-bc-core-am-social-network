@@ -18,10 +18,10 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 addingProfilePopover();
-
 $(function() {
   $('[data-toggle="popover"]').popover();
-});
+}); 
+
 // updateInRealTime();
 
 const printUserPost = () => {
@@ -42,7 +42,7 @@ const printUserPost = () => {
           </div>
           <div class="card-body bg-dark">
           <p>${post.data().username}
-          <span class="pt-1x">
+          <span class="pt-1">
           <i onclick="likePost('${post.id}', '${post.userEmail}', '${post.data().userEmail}')" class="fas fa-grin-tongue mx-2 mt-2" title="Me apetece"></i><span>${post.data().likes.length}</span>
           <i class="fas fa-share ml-2" title="Compartir"></i>
           <i onclick="deletePost('${post.id}' , '${post.data().userEmail}')" class="fas fa-trash-alt ml-2" title="Eliminar"></i>
