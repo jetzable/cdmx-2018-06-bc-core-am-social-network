@@ -10,6 +10,8 @@ window.initializeFirebase = () => {
   });
 };
 
+
+// Register new Account //
 window.newAccount = (email, password) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
@@ -33,6 +35,8 @@ window.newAccount = (email, password) => {
     });
 };
 
+
+// Send email to verify email account //
 window.verifyAccountWithEmail = () => {
   let user = firebase.auth().currentUser;
 
@@ -47,11 +51,11 @@ window.verifyAccountWithEmail = () => {
 };
 
 
+// Login function //
 window.loginUser = (email, password) => {
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then(() => {
       location.href = ('views/newsfeed.html');
-      console.log('siii');
     })
     .catch((error) => {
       // Handle Errors here.
@@ -67,7 +71,7 @@ window.loginUser = (email, password) => {
     });
 };
 
-
+// Google Sign-In //
 window.googleUserLogin = () => {
   let provider = new firebase.auth.GoogleAuthProvider();
   provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -96,6 +100,7 @@ window.googleUserLogin = () => {
     });
 };
 
+// Facebook sign-in //
 window.facebookUserLogin = () => {
   let provider = new firebase.auth.FacebookAuthProvider();
   firebase.auth().useDeviceLanguage();
@@ -123,6 +128,7 @@ window.facebookUserLogin = () => {
     });
 };
 
+// Twitter sign-in //
 window.twitterUserLogin = () => {
   let provider = new firebase.auth.TwitterAuthProvider();
   firebase.auth().useDeviceLanguage();
@@ -149,6 +155,8 @@ window.twitterUserLogin = () => {
     });
 };
 
+
+// GitHub sign-in //
 window.githubUserLogin = () => {
   let provider = new firebase.auth.GithubAuthProvider();
   firebase.auth().useDeviceLanguage();
@@ -175,6 +183,7 @@ window.githubUserLogin = () => {
     });
 };
 
+// New Post //
 
 window.verifyLoginUser = () => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -231,6 +240,9 @@ window.addingDataToNewsfeed = (input) => {
       let photoURL = user.photoURL;
       let uid = user.uid;
       let postTime = firebase.firestore.FieldValue.serverTimestamp();
+      if (displayName === null) {
+        displayName = email;
+      }
       db.collection('posts').add({
         username: displayName,
         postInput: input,
@@ -249,13 +261,12 @@ window.addingDataToNewsfeed = (input) => {
         });
       // ...
     } else {
-      // User is signed out.
-      console.log('nooo');
+      console.log('User is signed out.');
     }
   });
 };
 
-
+// LogOut function //
 window.signOutUser = () => {
   firebase.auth().signOut()
     .then(() => {
@@ -266,6 +277,7 @@ window.signOutUser = () => {
     });
 };
 
+// Deleting post //
 window.deletePost = (postToDelete, userPost) => {
   let user = firebase.auth().currentUser;
   if (user.email === userPost) {
@@ -288,6 +300,8 @@ window.deletePost = (postToDelete, userPost) => {
   }
 };
 
+
+// "Me apetece" function //
 window.likePost = (postId, userAddingLike) => {
   db.collection('posts').doc(postId).get()
     .then((post) => {
@@ -320,6 +334,8 @@ window.likePost = (postId, userAddingLike) => {
     });
 };
 
+
+// Reset password //
 window.passwordReset = (userEmail) => {
   let auth = firebase.auth();
   let emailAddress = userEmail;
@@ -335,6 +351,7 @@ window.passwordReset = (userEmail) => {
     });
 };
 
+// Creating profile //
 window.createUserProfileWithEmail = (name, email, location) => {
   db.collection('users').add({
     userName: name,
@@ -349,6 +366,8 @@ window.createUserProfileWithEmail = (name, email, location) => {
     });
 };
 
+
+// Editing post //
 window.editPost = (postId, postUserID) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user.email === postUserID) {
@@ -359,6 +378,7 @@ window.editPost = (postId, postUserID) => {
   });
 };
 
+// Adding edited post //
 window.savePostEdition = (postId) => {
   let newPostInput = document.getElementById(`post${postId}`).value;
   db.collection('posts').doc(postId).get()
