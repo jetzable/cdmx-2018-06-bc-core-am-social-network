@@ -1,31 +1,23 @@
-/*@media (max-width: 992px) {
-  .welcome {
-    width: 50%;
-    float: right;
-    display: block;
-body{
-    background-color: rgba(255, 94, 58, 0.95);
-    font-family: 'roboto';
-    font-weight: 700;
-    font-size: 2em;
-    }
-    header {
-      height: fixed;
-      /*background-image: url("../images/");*/
-      body{
+      body {
         background-color: rgba(255, 94, 58, 0.95);
         font-family: 'Montserrat';
         font-weight: 700;
-        font-size: 2em;
+        font-size: 20px;
         }
     
         header {
           height: fixed;
           /*background-image: url("../images/");*/
         }
-      .img-fluid {
+      
+        .img-fluid {
         width: 50%;
       }
+  
+  .tongue-iconPost {
+    color: aliceblue;
+    background-color: transparent;
+  }
   
   .form-inline{
   flex-flow: inherit;
@@ -115,9 +107,6 @@ body{
   
     }
   */
-  .font-color{
-    color: aliceblue;
-  }
   
  /* @media (max-width: 0px) {
     navbar-nav .open .dropdown-menu {

@@ -184,6 +184,43 @@ window.githubUserLogin = () => {
 };
 
 // New Post //
+
+window.verifyLoginUser = () => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      // User is signed in.
+      let displayName = user.displayName;
+      let email = user.email;
+      let emailVerified = user.emailVerified;
+      let photoURL = user.photoURL;
+      let isAnonymous = user.isAnonymous;
+      let uid = user.uid;
+      let providerData = user.providerData;
+      let password = user.password;
+      // ...
+    } else {
+      // User is signed out.
+      console.log('nooo');
+    }
+  });
+};
+
+// Agregando funcionalidad de popover para información de usuario
+window.addingProfilePopover = () => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      const profileButton = document.getElementById('popover-button');
+      const printProfileButton = `<button id="popover-button" class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="${user.displayName}">
+      <span class="sr-only">(current)</span>
+      <i class="fas fa-user px-3" title="Perfil"></i>
+      </button>`;
+      profileButton.innerHTML = printProfileButton;  
+    } else {
+      console.log('nooo');
+    }
+  });
+};
+
 window.addingDataToNewsfeed = (input) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
