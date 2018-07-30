@@ -13,15 +13,23 @@ firebase.auth().onAuthStateChanged((user) => {
     let isAnonymous = user.isAnonymous;
     let uid = user.uid;
     let providerData = user.providerData;
+    profilePopover(user);
   } else {
     location.href = ('../index.html');
   }
 });
-addingProfilePopover();
-$(function() {
-  $('[data-toggle="popover"]').popover();
-}); 
 
+const profilePopover = (user) => {
+  $(() => {
+    $('[data-toggle="popover"]').popover();
+  });
+  const profileButton = document.getElementById('popover-button');
+  const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content='${user.email}'>
+      <span class="sr-only">(current)</span>
+      <i class="fas fa-user px-3" title="Perfil"></i>
+      </button>`;
+  profileButton.innerHTML = printProfileButton;
+};
 // updateInRealTime();
 
 const printUserPost = () => {
