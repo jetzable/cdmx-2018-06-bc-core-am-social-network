@@ -16,6 +16,7 @@ window.newAccount = (email, password) => {
       verifyAccountWithEmail();
       alert('Se ha enviado un correo a tu email para verificar tu cuenta.');
       signOutUser();
+      location.href = ('../index.html');
     })
     .catch((error) => {
       // Handle Errors here.
@@ -203,7 +204,7 @@ window.addingDataToNewsfeed = (input) => {
       let email = user.email;
       let photoURL = user.photoURL;
       let uid = user.uid;
-      let postTime = `${new Date()}`;
+      let postTime = firebase.firestore.FieldValue.serverTimestamp();
       db.collection('posts').add({
         username: displayName,
         postInput: input,
@@ -292,3 +293,65 @@ window.likePost = (postId, userAddingLike) => {
       console.log(error);
     });
 };
+
+window.passwordReset = (userEmail) => {
+  let auth = firebase.auth();
+  let emailAddress = userEmail;
+
+  auth.sendPasswordResetEmail(emailAddress)
+    .then(() => {
+      // Email sent.
+      alert('Se ha enviado un mail a tu correo para poder recuperar tu contraseña.');
+      location.href = ('../index.html');
+    }).catch((error) => {
+      // An error happened.
+      console.log(error);
+    });
+};
+
+window.createUserProfileWithEmail = (name, email, location) => {
+  db.collection('users').add({
+    userName: name,
+    userEmail: email,
+    city: location
+  })
+    .then((docRef) => {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error adding document: ', error);
+    });
+};
+
+window.editPost = (postId, postUserID) => {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user.email === postUserID) {
+      createUpdateArea(postId);
+    } else {
+      alert('No puedes modificar publicaciones de otros garnacheros');
+    }
+  });
+};
+
+window.savePostEdition = (postId) => {
+  let newPostInput = document.getElementById(`post${postId}`).value;
+  db.collection('posts').doc(postId).get()
+    .then(post => {
+      db.collection('posts').doc(postId).update({
+        postInput: newPostInput
+      })
+        .then(result => {
+          printUserPost();
+        })
+        .catch(error => {
+          console.log(error);
+          alert('No pudimos editar tu publicación, intentalo de nuevo.');
+        });
+    });
+};
+
+// window.updateInRealTime = () => {
+//   let printedPosts = document.getElementById('list-post');
+//   const dbRef = firebase.database().ref().child('printedPosts');
+//   dbRef.onSnapshot(snap => printedPosts.innerHTML = snap.val());
+// };  
