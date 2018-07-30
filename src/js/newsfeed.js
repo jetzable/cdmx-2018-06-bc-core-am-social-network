@@ -2,7 +2,21 @@ initializeFirebase();
 let db = firebase.firestore();
 let dbSettings = { timestampsInSnapshots: true };
 db.settings(dbSettings);
-// updateInRealTime();
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in.
+    let displayName = user.displayName;
+    let email = user.email;
+    let emailVerified = user.emailVerified;
+    let photoURL = user.photoURL;
+    let isAnonymous = user.isAnonymous;
+    let uid = user.uid;
+    let providerData = user.providerData;
+  } else {
+    location.href = ('../index.html');
+  }
+});
 
 const printUserPost = () => {
   const postListRef = db.collection('posts').orderBy('time', 'desc');
@@ -39,13 +53,6 @@ document.getElementById('user-post-btn').addEventListener('click', event => {
   document.getElementById('user-post').value = '';
 });
 
-document.getElementById('log-out-btn').addEventListener('click', event => {
-  event.preventDefault();
-  signOutUser();
-  alert('¡Hasta la próxima Garnacha!');
-  location.href = ('../index.html');
-});
-
 const createUpdateArea = (postID) => {
   db.collection('posts').doc(postID).get()
     .then(post => {
@@ -53,3 +60,10 @@ const createUpdateArea = (postID) => {
     })
     .catch(error => console.log(error));
 };
+
+document.getElementById('log-out-btn').addEventListener('click', event => {
+  event.preventDefault();
+  signOutUser();
+  alert('¡Hasta la próxima Garnacha!');
+  location.href = ('../index.html');
+});
