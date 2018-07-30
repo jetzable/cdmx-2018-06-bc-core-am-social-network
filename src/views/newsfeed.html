@@ -2,119 +2,117 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--Aquí agregar imagen para la ventana-->
-  <title>GarnachApp Newsfeed</title>
-  <!--Agregando link para poder usar Bootstrap CSS-->
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
-    crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Aquí agregar imagen para la ventana-->
+    <title>GarnachApp Newsfeed</title>
+    <!--Agregando link para poder usar Bootstrap CSS-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bitter|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
- <div class="container-fluid">
-   <header>
-     <!--Aquí Card para publicar en newsfeed-->
-     <div class="row">
-       <div class="col-sm-12 col-lg-12 mb-4 text-center mt-3">
-         <img src="../images/garnachapp.png" class="img-fluid" alt="LogoGarnachapp">
-       </div>
-     </div>
- </div>
- </header>
- <section id="post-section">
-   <div class="card border-dark mx-4">
-     <!--Aquí, de ser posible insertar imagen <img class="card-img-left" src="../images/garnachasMuestra.jpg" alt="PuestoTípicoGarnachero">-->
-     <div class="card-body-sm bg-dark">
-       <div class="container">
-         <div class="row">
-           <div class="col-sm-12 px-1">
-             <textarea id="user-post" class="form-control" aria-label="GarnachApp"></textarea>
-           </div>
-           <div class="col-sm-4 mb-3">
-             <button id="user-post-btn" class="card-body-sm btn btn-warning">Publicar</button>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   <section id="list-post" class="col-sm-8 text-center">
-    
-     </section>
- </section>
-
-
-    
-      <!--navbar horizontal-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        
-        <!-- awesome font de google para reemplazar palabras, este DIV encierra TODO el contenido de la NavBar-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                  <span class="sr-only">(current)</span>
-                <!--Awesome font "AGREGAR" p/reemplazar palabras (User centricity)-->
-                <i class="fas fa-user px-3" title="Perfil"></i>
-             
-              </a>
-            </li>
-
-            <li class="nav-item display">
-              <a class="nav-link" href="#">
-                <!--Awesome font "CONTACTOS"-->
-                <i class="fas fa-user-friends" title="Amigos"></i>
-              </a>
-            </li>
-
-            <li class="nav-item display">
-              <a class="nav-link" href="#">
-                <!--Awesome font "ME APETECE"-->
-                <i class="fas fa-grin-tongue px-3" title="Me apetece"></i>
-              </a>
-            </li>
-
-            <li class="nav-item display">
-              <a id="log-out-btn" class="nav-link" href="#">
-                <!--Awesome font "ME APETECE"-->
-                <i class="fas fa-sign-out-alt" title="Salir"></i>
-              </a>
-            </li>
-            <!--Ícono engrane para "OPCIONES" y dropup p/ el sentido del despliegue-->
-          </ul>
-          <!--Input y botón de búsqueda-->
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control-sm mr-sm-2" type="search" placeholder="¿Quieres una garnacha?" aria-label="Search">
-            <button class="btn btn-warning btn-sm my-2" type="submit">Buscar</button>
-          </form>
+    <div class="container-fluid">
+        <header>
+            <!--Aquí Card para publicar en newsfeed-->
+            <div class="row">
+                <div class="col-sm-12 col-lg-12 mb-2 text-center mt-3">
+                    <img src="../images/garnachapp.png" class="img-fluid" alt="LogoGarnachapp">
+                </div>
+            </div>
+        </header>
+    </div>
+    <section id="post-section pt-3">
+        <div class="card border-dark mx-4 ">
+            <!--Aquí, de ser posible insertar imagen <img class="card-img-left" src="../images/garnachasMuestra.jpg" alt="PuestoTípicoGarnachero">-->
+            <div class="card-body-sm bg-dark">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 my-2">
+                            <textarea id="user-post" class="form-control text-area-publicacion" aria-label="GarnachApp"></textarea>
+                        </div>
+                        <div class="col-sm-4 my-3">
+                            <button id="user-post-btn" class="card-body-sm btn btn-warning">Publicar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </nav>
-      <!--Fin de navbar horizontal-->
-  
-  </div>
+        <!--Sección de publicaciones generadas dinámicamente-->
+        <section class="mt-2 mb-2 tongue-iconPost ">
+        <div class="container-fluid">
+            <div class="row" id="list-post">
+            </div>
+        </div>
+        </section>
+    </section>
+    </div>
+    <!--navbar horizontal-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+        <a class="navbar-brand" href="#"></a>
+        <!--Ícono colapsa cuand RWD (Hamburguer icon) -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        <!-- awesome font de google para reemplazar palabras, este DIV encierra TODO el contenido de la NavBar-->
+        <!--Awesome font "AGREGAR" p/reemplazar palabras (User centricity)-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" id="popover-button">
+                </li>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
+                <li class="nav-item display">
+                    <a class="nav-link" href="#">
+                        <!--Awesome font "CONTACTOS"-->
+                        <i class="fas fa-user-friends px-3" title="Amigos"></i>
+                    </a>
+                </li>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-    crossorigin="anonymous"></script>
+                <li class="nav-item display">
+                    <a class="nav-link" href="#">
+                        <!--Awesome font "ME APETECE"-->
+                        <i class="fas fa-grin-tongue px-3" title="Me apetece"></i>
+                    </a>
+                </li>
 
-  <!-- Adding Firebase y Firestore -->
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script src="../js/index.js"></script>
-  <script src="../js/newsfeed.js"></script>
+                <li class="nav-item display">
+                    <a id="log-out-btn" class="nav-link" href="#">
+                        <!--Awesome font "ME APETECE"-->
+                        <i class="fas fa-sign-out-alt" title="Salir"></i>
+                    </a>
+                </li>
+                <!--Ícono engrane para "OPCIONES" y dropup p/ el sentido del despliegue-->
+            </ul>
+            <!--Input y botón de búsqueda-->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control-sm mr-sm-2" type="search" placeholder="¿Quieres una garnacha?" aria-label="Search">
+                <button class="btn btn-warning btn-sm my-2" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <!--Fin de navbar horizontal-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+
+    <!-- Adding Firebase y Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/newsfeed.js"></script>
 
 </body>
 
