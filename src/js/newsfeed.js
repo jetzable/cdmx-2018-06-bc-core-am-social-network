@@ -3,6 +3,7 @@ let db = firebase.firestore();
 let dbSettings = { timestampsInSnapshots: true };
 db.settings(dbSettings);
 addingProfilePopover();
+
 $(function() {
   $('[data-toggle="popover"]').popover();
 });

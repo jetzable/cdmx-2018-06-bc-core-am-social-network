@@ -201,7 +201,7 @@ window.addingProfilePopover = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       const profileButton = document.getElementById('popover-button');
-      const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="${user.displayName}">
+      const printProfileButton = `<button id="popover-button" class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="${user.displayName}">
       <span class="sr-only">(current)</span>
       <i class="fas fa-user px-3" title="Perfil"></i>
       </button>`;
