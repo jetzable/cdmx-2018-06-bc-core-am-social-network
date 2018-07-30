@@ -118,16 +118,7 @@ b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
                               ![Login Web](images/web.gif) 
                               ![NewsFeed](images/newsfeed.jpg)
 
-               [Alta Fidelidad] (https://www.figma.com/file/LeDMOc6n08FLECZQ5FFXlf3B/Welcome-Register)               
-
-**2. Entregables del 2do. Sprint**
-
-Prototipo de alta fidelidad
-	
-a) [Login] (Pendiente)
-
-
-**3. Entregables del 3er. Sprint**
+               Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.jpg)          
 
 ##Tech
 Desarrollado con:
@@ -183,9 +174,9 @@ Para probar la plataforma actual, se debe contar con acceso a internet e ingresa
 
 [Aquí las ligas para direccionar a nuestros GitHub]
 
-[Palmidia Garay] (https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
-[Vianey Lara] (https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
-[Copelia Altamirano] (https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
+[Palmidia Garay](https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
+[Vianey Lara](https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
+[Copelia Altamirano](https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
 
 ## Checklist
 
@@ -198,7 +189,7 @@ Para probar la plataforma actual, se debe contar con acceso a internet e ingresa
 * [x] Definición del producto.
 * [x] Benchamark de las principales redes sociales.
 * [ ] Resumen de entrevistas con usuarios.
-* [ ] Link/screenshots prototipo de alta fidelidad.
+* [x] Link/screenshots prototipo de alta fidelidad.
 * [ ] Conclusiones de pruebas del prototipo con usuarios.
 * [ ] Conclusiones de pruebas con el producto en HTML.
 
@@ -210,10 +201,10 @@ Para probar la plataforma actual, se debe contar con acceso a internet e ingresa
 
 ### Creación de cuenta (sign up)
 
-* [ ] Permite crear cuenta.
-* [ ] Valida email.
-* [ ] Valida password.
-* [ ] Muestra mensajes de error.
+* [x] Permite crear cuenta.
+* [x] Valida email.
+* [x] Valida password.
+* [x] Muestra mensajes de error.
 
 ### Inicio de sesión (sign in)
 
@@ -225,9 +216,9 @@ Para probar la plataforma actual, se debe contar con acceso a internet e ingresa
 ### Muro (wall/feed)
 
 * [x] Muestra _muro_.
-* [ ] Permite publicar nuevos posts.
-* [ ] Permite eliminar posts.
+* [x] Permite publicar nuevos posts.
+* [x] Permite eliminar posts.
 * [ ] Pide confirmación antes de borrar posts.
-* [ ] Permite editar posts (in place).
+* [x] Permite editar posts (in place).
 * [ ] Permite filtrar posts por público/amigos.
-* [ ] Permite marcar posts como _gustados_ (like).
+* [x] Permite marcar posts como _gustados_ (like).
