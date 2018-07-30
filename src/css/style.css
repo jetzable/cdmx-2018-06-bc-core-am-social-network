@@ -6,28 +6,32 @@ body{
 /*==================Estilo de texto======================*/
 .txt1,
 .txt3 {
-  font-family: 'Bitter', serif;
-  font-size: 15px;
-  font-style: bold;
-  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 550;
+  color: whitesmoke;
 }
 
 .txt2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
-  font-style: bold;
-  color: #7d5ac2;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffc107;
 }
 
-.link-box {
+.link-box,
+.input-box {
   text-align: -webkit-center;
   padding-bottom: 80px;
 }
 
+.input-box {
+  padding-top: 30px;
+  align-items: center !important;
+}
 /*============Formulario=======================*/
 
 .login-form {
-
   padding: 80px 65px 40px 65px;
   background-color: rgba(255, 94, 58, 0.95);
 }
@@ -36,7 +40,7 @@ body{
   font-family: 'Bitter', serif;
   font-size: 20px;
   font-weight: 800;
-  color: white;
+  color: whitesmoke;
   line-height: 1.2;
   letter-spacing: 2px;
   text-align: center;
@@ -59,18 +63,18 @@ body{
   outline: none;
   border-width: 1px;
   border-style: solid;
-  border-color:  white;
+  border-color:  whitesmoke;
 
 }
 
 .btn-box {
-  text-align: -webkit-center;
+  text-align: center !important;
   padding-bottom: 5px;
   padding-top: 5px;
 }
 
 .input::placeholder{
-  color: white;
+  color: whitesmoke;
 }
 
 #register-button {
@@ -81,28 +85,20 @@ body{
 
 
 .welcome {
-
+  background-color: rgba(255, 94, 58, 0.95);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 1;
-  background-image: url('http://4.bp.blogspot.com/-uJ5is1nlxzk/VBMtGOSyp4I/AAAAAAAAGls/mk5FFCVALz8/s1600/IMG_0378_2.jpg');
+  background-image: url('../images/garnachaWelcome.jpg');
 }
-
-
-.no-margin {
-    margin-right: 0px !important; 
-    margin-left: 0px !important;
-}
-  
- 
 
 .welcome-text{
   font-family: 'Bitter', serif;
   font-size: 18px;
   font-style: bold;
-  color: white;
+  color: whitesmoke;
   font-weight: 700;
   align-content: center;
   padding: 1em;
