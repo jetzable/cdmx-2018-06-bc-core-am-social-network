@@ -277,25 +277,25 @@ window.deletePost = (postToDelete, userPost) => {
 
 
 // "Me apetece" function //
-window.likePost = (postId, userAddingLike) => {
+window.likePost = (postId) => {
+  let userAddingLike = firebase.auth().currentUser;
   db.collection('posts').doc(postId).get()
     .then((post) => {
       let newLike = post.data().likes;
-      if (post.data().likes.length === 0) {
-        newLike.push(`${userAddingLike}`);
+      if (newLike.length === 0) {
+        newLike.push(`${userAddingLike.email}`);
         db.collection('posts').doc(postId).update({
           likes: newLike
         });
       } else {
-        for (let i = 0; i < post.data().likes.length; i++) {
-          if (post.data().likes[i] === userAddingLike) {
+        for (let i = 0; i < newLike.length; i++) {
+          if (newLike[i] === userAddingLike.email) {
             newLike.splice(i, 1);
             db.collection('posts').doc(postId).update({
               likes: newLike
             });
           } else {
-            newLike.push(`${userAddingLike}`);
-            console.log(newLike);
+            newLike.push(`${userAddingLike.email}`);
             db.collection('posts').doc(postId).update({
               likes: newLike
             });
