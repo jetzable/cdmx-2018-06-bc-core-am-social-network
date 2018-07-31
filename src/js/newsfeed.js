@@ -6,48 +6,80 @@ db.settings(dbSettings);
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    // User is signed in.
-    let displayName = user.displayName;
-    let email = user.email;
-    let photoURL = user.photoURL;
-    let uid = user.uid;
-    let providerData = user.providerData;
-    if (displayName === null) {
-      db.collection('users').get()
-        .then(element => {
-          element.forEach(user => {
-            if (user.data().userEmail === email) {
-              displayName = user.data().userName;
-            }
-          });
-          console.log(displayName);
-          $(() => {
-            $('[data-toggle="popover"]').popover({
-              trigger: 'click',
-              placement: 'top',
-              html: true,
-              _content: `<div class="card text-center my-2"><div class="card-header">
-              <h5 class="card-title">${displayName}</h5></div>
-              <a><img class="card-img-top user-image my-3" src="../images/userImage.png"></a><div class="card-body">
-              <h7 class="card-title"><p class="card-text">${user.email}</p></h7>
-              <h7 class="card-title"><p class="card-text"></p></h7>
-              </div></div></div>`,
-              get content() {
-                return this._content;
-              },
-              set content(value) {
-                this._content = value;
-              },
+    user.providerData.forEach((profile) => {
+      console.log('Sign-in provider: ' + profile.providerId);
+      console.log('  Provider-specific UID: ' + profile.uid);
+      console.log('  Name: ' + profile.displayName);
+      console.log('  Email: ' + profile.email);
+      console.log('  Photo URL: ' + profile.photoURL);
+      if (profile.displayName === null) {
+        db.collection('users').get()
+          .then(element => {
+            element.forEach(user => {
+              if (user.data().userEmail === profile.email) {
+                displayName = user.data().userName;
+                console.log(displayName);
+              }
             });
+            $(() => {
+              $('[data-toggle="popover"]').popover({
+                trigger: 'click',
+                placement: 'top',
+                html: true,
+                _content: `<div class="card text-center my-2"><div class="card-header">
+                        <h5 class="card-title">${displayName}</h5></div>
+                        <a><img class="card-img-top user-image my-3" src="../images/userImage.png"></a><div class="card-body">
+                        <h7 class="card-title"><p class="card-text">${profile.email}</p></h7>
+                        <h7 class="card-title"><p class="card-text"></p></h7>
+                        </div></div></div>`,
+                get content() {
+                  return this._content;
+                },
+                set content(value) {
+                  this._content = value;
+                },
+              });
+            });
+            const profileButton = document.getElementById('popover-button');
+            const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top">
+                        <span class="sr-only">(current)</span>
+                        <i class="fas fa-user px-3" title="Perfil"></i>
+                        </button>`;
+            profileButton.innerHTML = printProfileButton;
           });
-          const profileButton = document.getElementById('popover-button');
-          const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top">
-              <span class="sr-only">(current)</span>
-              <i class="fas fa-user px-3" title="Perfil"></i>
-              </button>`;
-          profileButton.innerHTML = printProfileButton;
+      } else {
+        console.log('Sign-in provider: ' + profile.providerId);
+        console.log('  Provider-specific UID: ' + profile.uid);
+        console.log('  Name: ' + profile.displayName);
+        console.log('  Email: ' + profile.email);
+        console.log('  Photo URL: ' + profile.photoURL);
+        $(() => {
+          $('[data-toggle="popover"]').popover({
+            trigger: 'click',
+            placement: 'top',
+            html: true,
+            _content: `<div class="card text-center my-2"><div class="card-header">
+                        <h5 class="card-title">${profile.displayName}</h5></div>
+                        <a><img class="card-img-top user-image my-3" src="../images/userImage.png"></a><div class="card-body">
+                        <h7 class="card-title"><p class="card-text">${profile.email}</p></h7>
+                        <h7 class="card-title"><p class="card-text"></p></h7>
+                        </div></div></div>`,
+            get content() {
+              return this._content;
+            },
+            set content(value) {
+              this._content = value;
+            },
+          });
         });
-    };
+        const profileButton = document.getElementById('popover-button');
+        const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top">
+                        <span class="sr-only">(current)</span>
+                        <i class="fas fa-user px-3" title="Perfil"></i>
+                        </button>`;
+        profileButton.innerHTML = printProfileButton;
+      };
+    });
   } else {
     location.href = ('../index.html');
   }
