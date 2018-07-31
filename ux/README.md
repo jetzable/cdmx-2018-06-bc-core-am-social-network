@@ -22,9 +22,10 @@ La característica más importante y por la que el modelo de negocio se plantea 
 Al permitir el libre flujo de información, las interacciones humanas se detonan y pueden ser almacenadas y/o registradas remotamente. El resultado de esa data puede ser utilizada para fines de lucro e impacto al mercado.
 El eje principal del producto radica en identificar a los usuarios a los que estará enfocada la WebApp.
 
-##Desarrollo
+###Desarrollo
 
-### 1) Definición del producto
+** 1) Definición del producto **
+
 **GARNACHAPP**
 
 En su primera etapa de desarrollo; **GARNACHAPP** es una red social para residentes de la CDMX, que buscan activamente alternativas para disfrutar la experiencia de comer entre tanta diversidad que la cocina mexicana **informal** ofrece y en dónde el pago en efectivo hace de la toma de decisiones muy ágil y adecuándose al estilo de vida urbano que predomina en la generación **Millennial y Cía.**, hoy en día.
@@ -87,13 +88,13 @@ El objetivo del usuario en relación con el producto será el descubrimiento de 
 
 ### UX Sketching
 
-a) Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.jpg)
+a) Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.png)
 
-b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
-                              ![Login Web](images/web.gif) 
-                              ![NewsFeed](images/newsfeed.jpg)
+b) Versión 1.0 Baja Fidelidad 
+![Login Mobile](images/mobile.gif)
+![Login Web](images/web.gif) 
+![NewsFeed](images/newsfeed.jpg)
 
-                         
 
 ##Tech
 Desarrollado con:
@@ -164,9 +165,10 @@ Para probar la plataforma actual, se debe contar con acceso a internet e ingresa
  
 ##Colaboradoras
 
-[Aquí las ligas para direccionar a nuestros GitHub]
 
 [Palmidia Garay](https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
+
 [Vianey Lara](https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
+
 [Copelia Altamirano](https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
 
