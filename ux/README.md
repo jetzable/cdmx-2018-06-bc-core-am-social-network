@@ -2,7 +2,7 @@
 
 ## Introducción
 
-proyecto del common core durante el Bootcamp de la 6ta Generación de Laboratoria: **Social Network.**
+Proyecto del common core durante el Bootcamp de la 6ta Generación de Laboratoria: **Social Network.**
 
 El reto consiste en crear una WebApp del tipo red social. El giro de este producto será: **Alimentación** y se enfoca en proponer un modelo de negocio que convenza a nuestra entrepreneur/clienta (Sofía) de otorgar financiamiento y así continuar con el desarrollo de la plataforma. 
 
@@ -12,15 +12,11 @@ El desarrollo será ágil, durante tres (3) sprints y en trío de programadoras.
 
 ## Preámbulo
 
-**[Análisis argumentativo de la elección de la red social]**
-
 Las redes sociales son estructuras sociales; tienen como finalidad principal poner en contacto a las personas, de tal forma que a través de la interfaz se lleve a cabo la comunicación de forma sencilla y rápida, facilitando la interacción entre todos los usuarios, ya sea compartiendo, contactando o facilitando información de interés para el otro usuario.
 
-Fomentan la posibilidad de que los usuarios contactados online, logren un contacto real, del que muy probablemente nacerán nuevas relaciones sociales y/o comerciales gracias a la reducción de distancias y tiempos por lo cual la satisfacción de ciertas necesidades pueden cubrirse rápidamente.
+Fomentan la posibilidad de que los usuarios contactado online, logren un contacto real, del que muy probablemente nacerán nuevas relaciones sociales y/o comerciales gracias a la reducción de distancias y tiempos por lo cual la satisfacción de ciertas necesidades pueden cubrirse rápidamente.
 
 Gracias al contacto *ilimitado* entre los usuarios, las redes sociales son una excelente opción mercadotécnica y la única condición que exige es que ambas partes acepten relacionarse entre sí.
-
-**[Comienza TARGET, argumentación del proyecto]**
 
 La característica más importante y por la que el modelo de negocio se plantea como red social, es por la facilidad de difusión viral de información a través de cada uno de los usuarios que la componen, empleando este método como principal forma de crecimiento en el número de usuarios.
 Al permitir el libre flujo de información, las interacciones humanas se detonan y pueden ser almacenadas y/o registradas remotamente. El resultado de esa data puede ser utilizada para fines de lucro e impacto al mercado.
@@ -50,13 +46,7 @@ En este canal **observamos** la cantidad de reproducciones y de suscripciones qu
 Posteriormente, creamos una [encuesta] (https://docs.google.com/forms/d/e/1FAIpQLSe9SvFLKFkTr8BGb24OkiFgWiLfNr9phaJfRdwUEADEK1vV2A/viewform) que permite indagar y confirmar la suposición o dicho de la cultura popular mexicana que dicta: 
 **“De la vista nace el amor"**, por lo que determinamos que otra de las necesidades de los usuarios es ver **anticipadamente** el producto alimenticio y determinar, de acuerdo a las valoraciones si acude a consumir y así cubrir la necesidad de **certeza y confiabilidad** lo cual nos permite tener claro el camino: Crear una marca.
 
- **[¿Cómo llegaste a la definición final de tu producto? PENDIENTE]**
-
-**[Quiénes son los principales usuarios de producto (TARGET)]**
-
-Todas aquellas personas residentes de la **CDMX**, que llevan un estilo de vida urbano, práctico y en constante movimiento, buscando alternativas y que **tienen necesidad de crear contenido continuamente** para atraer la atención de las personas a su alrededor y **compartir experiencias**, a través de fotografías o reseñas.
-
-**[¿Qué problema resuelve el producto para estos usuarios?]**
+Los principales usuarios del producto son todas aquellas personas residentes de la **CDMX**, que llevan un estilo de vida urbano, práctico y en constante movimiento, buscando alternativas y que **tienen necesidad de crear contenido continuamente** para atraer la atención de las personas a su alrededor y **compartir experiencias**, a través de fotografías o reseñas.
 
 El producto resolverá principalmente:
 
@@ -68,33 +58,24 @@ El producto resolverá principalmente:
 
 *	Necesidad de reconocimiento, al poder compartir nuevos descubrimientos de lugares y poder compartir imágenes. 
 
-**[¿Cuáles son los objetivos de estos usuarios en relación con el producto?]**
+El objetivo del usuario en relación con el producto será el descubrimiento de nuevas opciones para satisfacer la necesidad de alimentación de forma rápida, promueve la economía del productor mexicano y crea nuevas alternativas para fomentar las relaciones entre amigos y/o compartir el descubrimiento de nuevas experiencias. 
 
-Descubrimiento de nuevas opciones para satisfacer la necesidad de alimentación de forma rápida, promueve la economía del productor mexicano y crea nuevas alternativas para fomentar las relaciones entre amigos y/o compartir el descubrimiento de nuevas experiencias. 
-
-**[¿Cuáles son las principales funcionalidades del producto y cuál es su prioridad?]**
 
 ![Historias de Usuario:](images/historiasUsuario.jpg)
 
-**[¿Cómo verificaste que el producto les está resolviendo sus problemas?]**
-
-* Testear la interfaz con usuarios y comprobar que la marca genera confiabilidad y lealtad.
-**DESARROLLAR BRANDING.**
 
 **[¿Cómo te asegurarás que estos usuarios usen este producto?]**
 
-1.	Test de usabilidad de la interfaz.
+1. Testear la interfaz con usuarios y comprobar que la marca genera confiabilidad y lealtad.
 
-2.	Búsqueda de convenios con los productores
+2.	Test de usabilidad de la interfaz.
+
+3.	Búsqueda de convenios con los productores
 *(DescuentosXPublicidad).*
 
-3.	Publicidad por medio de stickers con los productores en sus negocios que envíen un mensaje claro: *“Nos estamos renovando”*, *“Tengo acceso a un perfil público para interactuar socialmente”*, *“Pronto tendré página web, ¡espérala!”*.
+4.	Publicidad por medio de stickers con los productores en sus negocios que envíen un mensaje claro: *“Nos estamos renovando”*, *“Tengo acceso a un perfil público para interactuar socialmente”*, *“Pronto tendré página web, ¡espérala!”*.
 
 ### 1.1 Herramientas de análisis de mercado.
-**[Idea general: ¿Qué queremos hacer? ¿Por qué y para qué lo queremos hacer? Incluye el problema y la solución que le estamos dando.
-Arquetipo de usuario.
-Pensar en qué contexto el usuario va a usar la red?
-Por qué la usará? Motivaciones del usuario]**
 
 1. ![Benchmark](images/Benchmark.jpg)
 
@@ -104,15 +85,9 @@ Por qué la usará? Motivaciones del usuario]**
 
 4. Tests de usabilidad.
 
-###1.2 Diseño de la Interfaz de Usuario (prototipo de alta fidelidad).
+### UX Sketching
 
-###1.3 Product Backlog.
-
-**1. Entregables del 1er. Sprint.**
-
-UX Sketching
-
-a) Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.JPG)
+a) Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.jpg)
 
 b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
                               ![Login Web](images/web.gif) 
@@ -127,10 +102,10 @@ Desarrollado con:
 * HTML5
 * CSS3
 * Bootstrap
-* Firebase
+* Firebase y Cloud Firestore
  
-##Detalles de uso y contenido
 
+##Detalles de uso y contenido
 
 La interfaz actual tiene como características:
 
@@ -156,15 +131,32 @@ Para poder utilizar el código, realizar modificaciones o contribuir al proyecto
 
 ##Archivos
 
-[El boilerplate de este proyecto contiene la siguiente estructura de archivos, así como toda la configuración de dependencias y tests:]
-AQUÍ SCREENSHOT DE BOILER PLATE (PENDIENTE)
+El boilerplate de este proyecto contiene la siguiente estructura de archivos, así como toda la configuración de dependencias y tests:
 
-Carpetas  (PENDIENTE)
+Carpetas
 
-* data.js 
-* main.js 
-* index.html (vistas)
-* style.css 
+./
+├── .editorconfig
+├── .eslintrc
+├── .gitignore
+├── README.md
+├── package-lock.json
+├── package.json
+├── src
+│   └── css
+│        └──images
+│   ├── js
+│   ├── views
+│   ├── index.html
+│   └── style.css
+└── test
+|   ├── data.spec.js
+|   ├── headless.js
+|   └── index.html
+└── ux
+    └── README.md
+    └──images
+
 
 ##¿Cómo hacer Sign up/Log in en nuestra red social?
 
@@ -178,47 +170,3 @@ Para probar la plataforma actual, se debe contar con acceso a internet e ingresa
 [Vianey Lara](https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
 [Copelia Altamirano](https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
 
-## Checklist
-
-### General
-
-* [ ] Producto final sigue los lineamientos del diseño.
-
-### `README.md`
-
-* [x] Definición del producto.
-* [x] Benchamark de las principales redes sociales.
-* [ ] Resumen de entrevistas con usuarios.
-* [x] Link/screenshots prototipo de alta fidelidad.
-* [ ] Conclusiones de pruebas del prototipo con usuarios.
-* [ ] Conclusiones de pruebas con el producto en HTML.
-
-### Pruebas / tests
-
-* [ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
-  y branches.
-* [ ] Pasa tests (y linters) (`yarn test`).
-
-### Creación de cuenta (sign up)
-
-* [x] Permite crear cuenta.
-* [x] Valida email.
-* [x] Valida password.
-* [x] Muestra mensajes de error.
-
-### Inicio de sesión (sign in)
-
-* [x] Permite iniciar sesión.
-* [x] Valida email.
-* [x] Valida password.
-* [x] Muestra mensajes de error.
-
-### Muro (wall/feed)
-
-* [x] Muestra _muro_.
-* [x] Permite publicar nuevos posts.
-* [x] Permite eliminar posts.
-* [ ] Pide confirmación antes de borrar posts.
-* [x] Permite editar posts (in place).
-* [ ] Permite filtrar posts por público/amigos.
-* [x] Permite marcar posts como _gustados_ (like).
