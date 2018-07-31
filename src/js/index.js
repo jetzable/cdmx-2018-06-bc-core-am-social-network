@@ -282,25 +282,18 @@ window.likePost = (postId) => {
   db.collection('posts').doc(postId).get()
     .then((post) => {
       let newLike = post.data().likes;
-      if (newLike.length === 0) {
-        newLike.push(`${userAddingLike.email}`);
+      let userLike = userAddingLike.email;
+      let userLikeSearch = newLike.indexOf(userLike);
+      if (userLikeSearch === -1) {
+        newLike.push(`${userLike}`);
         db.collection('posts').doc(postId).update({
           likes: newLike
         });
       } else {
-        for (let i = 0; i < newLike.length; i++) {
-          if (newLike[i] === userAddingLike.email) {
-            newLike.splice(i, 1);
-            db.collection('posts').doc(postId).update({
-              likes: newLike
-            });
-          } else {
-            newLike.push(`${userAddingLike.email}`);
-            db.collection('posts').doc(postId).update({
-              likes: newLike
-            });
-          }
-        }
+        newLike.splice(userLikeSearch, 1);
+        db.collection('posts').doc(postId).update({
+          likes: newLike
+        });
       }
       printUserPost();
     })
