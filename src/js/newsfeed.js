@@ -2,7 +2,56 @@ initializeFirebase();
 let db = firebase.firestore();
 let dbSettings = { timestampsInSnapshots: true };
 db.settings(dbSettings);
-// updateInRealTime();
+
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in.
+    let displayName = user.displayName;
+    let email = user.email;
+    let photoURL = user.photoURL;
+    let uid = user.uid;
+    let providerData = user.providerData;
+    if (displayName === null) {
+      db.collection('users').get()
+        .then(element => {
+          element.forEach(user => {
+            if (user.data().userEmail === email) {
+              displayName = user.data().userName;
+            }
+          });
+          console.log(displayName);
+          $(() => {
+            $('[data-toggle="popover"]').popover({
+              trigger: 'click',
+              placement: 'top',
+              html: true,
+              _content: `<div class="card text-center my-2"><div class="card-header">
+              <h5 class="card-title">${displayName}</h5></div>
+              <a><img class="card-img-top user-image my-3" src="../images/userImage.png"></a><div class="card-body">
+              <h7 class="card-title"><p class="card-text">${user.email}</p></h7>
+              <h7 class="card-title"><p class="card-text"></p></h7>
+              </div></div></div>`,
+              get content() {
+                return this._content;
+              },
+              set content(value) {
+                this._content = value;
+              },
+            });
+          });
+          const profileButton = document.getElementById('popover-button');
+          const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top">
+              <span class="sr-only">(current)</span>
+              <i class="fas fa-user px-3" title="Perfil"></i>
+              </button>`;
+          profileButton.innerHTML = printProfileButton;
+        });
+    };
+  } else {
+    location.href = ('../index.html');
+  }
+});
 
 const printUserPost = () => {
   const postListRef = db.collection('posts').orderBy('time', 'desc');
@@ -11,18 +60,24 @@ const printUserPost = () => {
       let nextPost = '';
       let i = 0;
       element.forEach(post => {
-        nextPost += `<div class="card-tittle individual-post" id='${post.id}'>
-          <div class="card-text-sm">
-          <div mb-4 mt-3>${post.data().postInput}</div>
+        nextPost += `<div class="col-md-6 mb-4">
+          <div class="card-header bg-dark">
+          <div class="card-tittle individual-post mx-4 mt-2 bg-dark" id='${post.id}'>
+          <div class="card-text bg-light px-4">
+          <div>${post.data().postInput}
           </div>
-          <div class="card-body-sm">
-          <i>${post.data().username}</i>
-          <span class="card-text font-color">
-          <i onclick="likePost('${post.id}' , '${post.userEmail}', '${post.data().userEmail}')" class="fas fa-grin-tongue ml-4" title="Me apetece"></i><span>${post.data().likes.length}</span>
-          <i class="fas fa-share ml-4" title="Compartir"></i>
-          <i onclick="deletePost('${post.id}' , '${post.data().userEmail}')" class="fas fa-trash-alt ml-4" title="Eliminar"></i>
-          <i onclick="editPost('${post.id}' , '${post.data().userEmail}')" class="fas fa-edit ml-4" title="Editar"></i>
-      </span>
+          </div>
+          </div>
+          </div>
+          <div class="card-body bg-dark">
+          <p>${post.data().username}
+          <span class="pt-1">
+          <i onclick="likePost('${post.id}', '${post.userEmail}', '${post.data().userEmail}')" class="fas fa-grin-tongue mx-2 mt-2" title="Me apetece"></i><span>${post.data().likes.length}</span>
+          <i class="fas fa-share ml-2" title="Compartir"></i>
+          <i onclick="deletePost('${post.id}' , '${post.data().userEmail}')" class="fas fa-trash-alt ml-2" title="Eliminar"></i>
+          <i onclick="editPost('${post.id}' , '${post.data().userEmail}')" class="fas fa-edit ml-2" title="Editar"></i>
+          </span>
+          </p>  
           </div>
         </div>`;
         i++;
@@ -39,13 +94,6 @@ document.getElementById('user-post-btn').addEventListener('click', event => {
   document.getElementById('user-post').value = '';
 });
 
-document.getElementById('log-out-btn').addEventListener('click', event => {
-  event.preventDefault();
-  signOutUser();
-  alert('¡Hasta la próxima Garnacha!');
-  location.href = ('../index.html');
-});
-
 const createUpdateArea = (postID) => {
   db.collection('posts').doc(postID).get()
     .then(post => {
@@ -53,3 +101,10 @@ const createUpdateArea = (postID) => {
     })
     .catch(error => console.log(error));
 };
+
+document.getElementById('log-out-btn').addEventListener('click', event => {
+  event.preventDefault();
+  signOutUser();
+  alert('¡Hasta la próxima Garnacha!');
+  location.href = ('../index.html');
+});
