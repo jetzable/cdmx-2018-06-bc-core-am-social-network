@@ -132,6 +132,10 @@
   padding: 0.75rem 0;
 }
 
+/*.popover-body {
+  
+}*/
+
 .no-btn{
   border: none;
   background-color: inherit;
@@ -140,7 +144,10 @@
 /*.card-body {
   
 }*/
-
+.user-image {
+  width: 20%;
+  height: auto;
+}
 .text-area-publicacion {
   max-height: 150px;
   min-height: 50px;

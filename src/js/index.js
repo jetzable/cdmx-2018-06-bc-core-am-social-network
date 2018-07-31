@@ -197,7 +197,6 @@ window.verifyLoginUser = () => {
 };
 
 // Agregando funcionalidad de popover para información de usuario
-// Agregando funcionalidad de popover para información de usuario
 window.addingProfilePopover = () => {
   const displayName = '';
   const email = '';
@@ -212,7 +211,6 @@ window.addingProfilePopover = () => {
     console.log('usuario vacio');
   }
 
-
   const profileButton = document.getElementById('popover-button');
   const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="${displayName}">
       <span class="sr-only">(current)</span>
@@ -221,7 +219,6 @@ window.addingProfilePopover = () => {
   profileButton.innerHTML = printProfileButton;
 };
 
-////////////////
 window.addingDataToNewsfeed = (input) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {

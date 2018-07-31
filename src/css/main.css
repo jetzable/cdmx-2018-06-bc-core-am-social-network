@@ -23,9 +23,6 @@
   flex-flow: inherit;
   }
   
-  .p{
-     text-align: right;
-  }
   .dropup .dropdown-toggle::after{
     margin-left: 0 !important ;
   }

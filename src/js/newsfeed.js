@@ -21,10 +21,26 @@ firebase.auth().onAuthStateChanged((user) => {
 
 const profilePopover = (user) => {
   $(() => {
-    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="popover"]').popover({
+      trigger: 'click',
+      placement: 'top',
+      html: true,
+      _content: `<div class="card text-center my-2"><div class="card-header">
+      <h5 class="card-title">NOMBRE ${user.displayName}</h5></div>
+      <a><img class="card-img-top user-image my-3" src="../images/userImage.png"></a><div class="card-body">
+      <h7 class="card-title"><p class="card-text">${user.email}</p></h7>
+      <h7 class="card-title"><p class="card-text">COLONIA</p></h7>
+      </div></div></div>`,
+      get content() {
+        return this._content;
+      },
+      set content(value) {
+        this._content = value;
+      },
+    });
   });
   const profileButton = document.getElementById('popover-button');
-  const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content='${user.email}'>
+  const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top">
       <span class="sr-only">(current)</span>
       <i class="fas fa-user px-3" title="Perfil"></i>
       </button>`;
