@@ -2,9 +2,7 @@
  
 ## Descripción y alcance del programa
 
-Hemos traído para ti una red social que te encantará! ¿Por qué? Porque reúne lo mejor de la comida mexicana en su expresión más local, la GarnachApp te permitirá explorar barrios comunes de tu ciudad para disfrutar de experiencias gastronómicas tradicionales y caseras.
-Sabemos que estás cansadx de ir a los mismos lugares en las mismas colonias, ¿Qué tal unas tostadas de pata o una gordita de masa azul para cenar? Estás a unos pasos de conseguir las recomendaciones de tus amigos sobre lugares "secretos" que albergan sabores muy garnacheros!
-A continuación podrás encontrar las instrucciones de instalación para comenzar a visitar y compartir lugares.
+¡Hemos traído para ti una red social que te encantará!. ¿Por qué?, porque reúne lo mejor de la comida mexicana en su expresión más local. GarnachApp te permitirá explorar barrios comunes de tu ciudad para disfrutar de experiencias gastronómicas tradicionales y caseras. Sabemos que estás cansadx de ir a los mismos lugares en las mismas colonias, ¿qué tal unas tostadas de pata o una gordita de masa azul para cenar?. Estás a unos pasos de conseguir las recomendaciones de tus amigos sobre lugares "secretos" que albergan sabores ¡muy garnacheros!. A continuación, encontrarás las instrucciones de instalación para que puedas comenzar a visitar y compartir lugares.
 
 
 ## Instalación

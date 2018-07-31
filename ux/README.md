@@ -84,7 +84,13 @@ El objetivo del usuario en relación con el producto será el descubrimiento de 
 
 3. Entrevistas con usuarios
 
-4. Tests de usabilidad.
+4. Tests de usabilidad sobre el producto obtenido durante el Sprint 3:
+
+Se pidió a x diferentes usuarios ingresar a la plataforma e interactuar libremente en ella, realizando click sobre iconos o acciones que les despertaran mayor interés.
+
+* Usuario 1 realizó el Login con su correo electrónico y logró hacer una publicación en poco tiempo. Al finalizar la exploración, comentó con el equipo de desarrolladoras que le fue fácil identificar el objetivo de la red social, sin embargo encontró un poco confusos los iconos del menú relacionados con Amigos y "Me apetece".  Una vez que se explicaron los iconos, pudo dar un "Me apetece". Como sugerencias para ampliar el proyecto, recomienda una característica que permita compartir ubicación y fotos de las recomendaciones.
+
+* Usuario 2 realizó el Login a través de Facebook y logró hacer una publicación en poco tiempo y para ella fue intuitivo el icono de "Me apetece", dando un like a otra publicación. Al finalizar la exploración comentó al equipo que le gustó el diseño y los colores. Así mismo, el tema de la red también fue fácil de identificar. La usuaria logró cerrar sesión con facilidad.
 
 ### UX Sketching
 
