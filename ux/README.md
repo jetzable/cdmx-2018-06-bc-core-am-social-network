@@ -149,10 +149,11 @@ Carpetas
 ├── src
 │   └── css
 │        └──images
+│        └── style.css
 │   ├── js
 │   ├── views
 │   ├── index.html
-│   └── style.css
+│   
 └── test
 |   ├── data.spec.js
 |   ├── headless.js
@@ -160,18 +161,20 @@ Carpetas
 └── ux
     └── README.md
     └──images
+
 ´´´ 
 
 ##¿Cómo hacer Sign up/Log in en nuestra red social?
 
-Para probar la plataforma actual, se debe contar con acceso a internet e ingresar a la [liga:] (https://jetzable.github.io/cdmx-2018-06-bc-core-am-social-network/src)
+Para probar la plataforma actual, se debe contar con acceso a internet e ingresar a la 
+[liga:](https://jetzable.github.io/cdmx-2018-06-bc-core-am-social-network/src)
  
 ##Colaboradoras
 
 
-[Palmidia Garay](https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
+[Palmidia Garay] (https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
 
-[Vianey Lara](https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
+[Vianey Lara] (https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
 
-[Copelia Altamirano](https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
+[Copelia Altamirano] (https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
 
