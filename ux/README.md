@@ -2,8 +2,6 @@
 
 ## Introducción
 
-proyecto del common core durante el Bootcamp de la 6ta Generación de Laboratoria: **Social Network.**
-
 El reto consiste en crear una WebApp del tipo red social. El giro de este producto será: **Alimentación** y se enfoca en proponer un modelo de negocio que convenza a nuestra entrepreneur/clienta (Sofía) de otorgar financiamiento y así continuar con el desarrollo de la plataforma. 
 
 El producto debe representar una marca, facilitar su desarrollo (branding) para permitir su escalabilidad geográfica y así lograr monetizar la interfaz a mediano plazo (1 año) y principalmente, conseguir impactar en el mercado.
@@ -12,23 +10,20 @@ El desarrollo será ágil, durante tres (3) sprints y en trío de programadoras.
 
 ## Preámbulo
 
-**[Análisis argumentativo de la elección de la red social]**
-
 Las redes sociales son estructuras sociales; tienen como finalidad principal poner en contacto a las personas, de tal forma que a través de la interfaz se lleve a cabo la comunicación de forma sencilla y rápida, facilitando la interacción entre todos los usuarios, ya sea compartiendo, contactando o facilitando información de interés para el otro usuario.
 
-Fomentan la posibilidad de que los usuarios contactados online, logren un contacto real, del que muy probablemente nacerán nuevas relaciones sociales y/o comerciales gracias a la reducción de distancias y tiempos por lo cual la satisfacción de ciertas necesidades pueden cubrirse rápidamente.
+Fomentan la posibilidad de que los usuarios contactado online, logren un contacto real, del que muy probablemente nacerán nuevas relaciones sociales y/o comerciales gracias a la reducción de distancias y tiempos por lo cual la satisfacción de ciertas necesidades pueden cubrirse rápidamente.
 
 Gracias al contacto *ilimitado* entre los usuarios, las redes sociales son una excelente opción mercadotécnica y la única condición que exige es que ambas partes acepten relacionarse entre sí.
-
-**[Comienza TARGET, argumentación del proyecto]**
 
 La característica más importante y por la que el modelo de negocio se plantea como red social, es por la facilidad de difusión viral de información a través de cada uno de los usuarios que la componen, empleando este método como principal forma de crecimiento en el número de usuarios.
 Al permitir el libre flujo de información, las interacciones humanas se detonan y pueden ser almacenadas y/o registradas remotamente. El resultado de esa data puede ser utilizada para fines de lucro e impacto al mercado.
 El eje principal del producto radica en identificar a los usuarios a los que estará enfocada la WebApp.
 
-##Desarrollo
+###Desarrollo
 
-### 1) Definición del producto
+** 1) Definición del producto **
+
 **GARNACHAPP**
 
 En su primera etapa de desarrollo; **GARNACHAPP** es una red social para residentes de la CDMX, que buscan activamente alternativas para disfrutar la experiencia de comer entre tanta diversidad que la cocina mexicana **informal** ofrece y en dónde el pago en efectivo hace de la toma de decisiones muy ágil y adecuándose al estilo de vida urbano que predomina en la generación **Millennial y Cía.**, hoy en día.
@@ -50,13 +45,7 @@ En este canal **observamos** la cantidad de reproducciones y de suscripciones qu
 Posteriormente, creamos una [encuesta] (https://docs.google.com/forms/d/e/1FAIpQLSe9SvFLKFkTr8BGb24OkiFgWiLfNr9phaJfRdwUEADEK1vV2A/viewform) que permite indagar y confirmar la suposición o dicho de la cultura popular mexicana que dicta: 
 **“De la vista nace el amor"**, por lo que determinamos que otra de las necesidades de los usuarios es ver **anticipadamente** el producto alimenticio y determinar, de acuerdo a las valoraciones si acude a consumir y así cubrir la necesidad de **certeza y confiabilidad** lo cual nos permite tener claro el camino: Crear una marca.
 
- **[¿Cómo llegaste a la definición final de tu producto? PENDIENTE]**
-
-**[Quiénes son los principales usuarios de producto (TARGET)]**
-
-Todas aquellas personas residentes de la **CDMX**, que llevan un estilo de vida urbano, práctico y en constante movimiento, buscando alternativas y que **tienen necesidad de crear contenido continuamente** para atraer la atención de las personas a su alrededor y **compartir experiencias**, a través de fotografías o reseñas.
-
-**[¿Qué problema resuelve el producto para estos usuarios?]**
+Los principales usuarios del producto son todas aquellas personas residentes de la **CDMX**, que llevan un estilo de vida urbano, práctico y en constante movimiento, buscando alternativas y que **tienen necesidad de crear contenido continuamente** para atraer la atención de las personas a su alrededor y **compartir experiencias**, a través de fotografías o reseñas.
 
 El producto resolverá principalmente:
 
@@ -68,33 +57,24 @@ El producto resolverá principalmente:
 
 *	Necesidad de reconocimiento, al poder compartir nuevos descubrimientos de lugares y poder compartir imágenes. 
 
-**[¿Cuáles son los objetivos de estos usuarios en relación con el producto?]**
+El objetivo del usuario en relación con el producto será el descubrimiento de nuevas opciones para satisfacer la necesidad de alimentación de forma rápida, promueve la economía del productor mexicano y crea nuevas alternativas para fomentar las relaciones entre amigos y/o compartir el descubrimiento de nuevas experiencias. 
 
-Descubrimiento de nuevas opciones para satisfacer la necesidad de alimentación de forma rápida, promueve la economía del productor mexicano y crea nuevas alternativas para fomentar las relaciones entre amigos y/o compartir el descubrimiento de nuevas experiencias. 
-
-**[¿Cuáles son las principales funcionalidades del producto y cuál es su prioridad?]**
 
 ![Historias de Usuario:](images/historiasUsuario.jpg)
 
-**[¿Cómo verificaste que el producto les está resolviendo sus problemas?]**
-
-* Testear la interfaz con usuarios y comprobar que la marca genera confiabilidad y lealtad.
-**DESARROLLAR BRANDING.**
 
 **[¿Cómo te asegurarás que estos usuarios usen este producto?]**
 
-1.	Test de usabilidad de la interfaz.
+1. Testear la interfaz con usuarios y comprobar que la marca genera confiabilidad y lealtad.
 
-2.	Búsqueda de convenios con los productores
+2.	Test de usabilidad de la interfaz.
+
+3.	Búsqueda de convenios con los productores
 *(DescuentosXPublicidad).*
 
-3.	Publicidad por medio de stickers con los productores en sus negocios que envíen un mensaje claro: *“Nos estamos renovando”*, *“Tengo acceso a un perfil público para interactuar socialmente”*, *“Pronto tendré página web, ¡espérala!”*.
+4.	Publicidad por medio de stickers con los productores en sus negocios que envíen un mensaje claro: *“Nos estamos renovando”*, *“Tengo acceso a un perfil público para interactuar socialmente”*, *“Pronto tendré página web, ¡espérala!”*.
 
 ### 1.1 Herramientas de análisis de mercado.
-**[Idea general: ¿Qué queremos hacer? ¿Por qué y para qué lo queremos hacer? Incluye el problema y la solución que le estamos dando.
-Arquetipo de usuario.
-Pensar en qué contexto el usuario va a usar la red?
-Por qué la usará? Motivaciones del usuario]**
 
 1. ![Benchmark](images/Benchmark.jpg)
 
@@ -102,23 +82,23 @@ Por qué la usará? Motivaciones del usuario]**
 
 3. Entrevistas con usuarios
 
-4. Tests de usabilidad.
+4. Tests de usabilidad sobre el producto obtenido durante el Sprint 3:
 
-###1.2 Diseño de la Interfaz de Usuario (prototipo de alta fidelidad).
+Se pidió a x diferentes usuarios ingresar a la plataforma e interactuar libremente en ella, realizando click sobre iconos o acciones que les despertaran mayor interés.
 
-###1.3 Product Backlog.
+* Usuario 1 realizó el Login con su correo electrónico y logró hacer una publicación en poco tiempo. Al finalizar la exploración, comentó con el equipo de desarrolladoras que le fue fácil identificar el objetivo de la red social, sin embargo encontró un poco confusos los iconos del menú relacionados con Amigos y "Me apetece".  Una vez que se explicaron los iconos, pudo dar un "Me apetece". Como sugerencias para ampliar el proyecto, recomienda una característica que permita compartir ubicación y fotos de las recomendaciones.
 
-**1. Entregables del 1er. Sprint.**
+* Usuario 2 realizó el Login a través de Facebook y logró hacer una publicación en poco tiempo y para ella fue intuitivo el icono de "Me apetece", dando un like a otra publicación. Al finalizar la exploración comentó al equipo que le gustó el diseño y los colores. Así mismo, el tema de la red también fue fácil de identificar. La usuaria logró cerrar sesión con facilidad.
 
-UX Sketching
+### UX Sketching
 
-a) Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.JPG)
+a) Alta Fidelidad ![Login y NewsFeed Mobile](images/sketchmobile.png)
 
-b) Versión 1.0 Baja Fidelidad ![Login Mobile](images/mobile.gif)
-                              ![Login Web](images/web.gif) 
-                              ![NewsFeed](images/newsfeed.jpg)
+b) Versión 1.0 Baja Fidelidad 
+![Login Mobile](images/mobile.gif)
+![Login Web](images/web.gif) 
+![NewsFeed](images/newsfeed.jpg)
 
-                         
 
 ##Tech
 Desarrollado con:
@@ -127,10 +107,10 @@ Desarrollado con:
 * HTML5
 * CSS3
 * Bootstrap
-* Firebase
+* Firebase y Cloud Firestore
  
-##Detalles de uso y contenido
 
+##Detalles de uso y contenido
 
 La interfaz actual tiene como características:
 
@@ -156,69 +136,49 @@ Para poder utilizar el código, realizar modificaciones o contribuir al proyecto
 
 ##Archivos
 
-[El boilerplate de este proyecto contiene la siguiente estructura de archivos, así como toda la configuración de dependencias y tests:]
-AQUÍ SCREENSHOT DE BOILER PLATE (PENDIENTE)
+El boilerplate de este proyecto contiene la siguiente estructura de archivos, así como toda la configuración de dependencias y tests:
 
-Carpetas  (PENDIENTE)
+Carpetas
 
-* data.js 
-* main.js 
-* index.html (vistas)
-* style.css 
+
+```text
+
+./
+├── .editorconfig
+├── .eslintrc
+├── .gitignore
+├── README.md
+├── package-lock.json
+├── package.json
+├── src
+│   └── css
+│        └──images
+│        └── style.css
+│   ├── js
+│   ├── views
+│   ├── index.html
+│   
+└── test
+|   ├── data.spec.js
+|   ├── headless.js
+|   └── index.html
+└── ux
+    └── README.md
+    └──images
+
+´´´ 
 
 ##¿Cómo hacer Sign up/Log in en nuestra red social?
 
-Para probar la plataforma actual, se debe contar con acceso a internet e ingresar a la [liga:] (https://jetzable.github.io/cdmx-2018-06-bc-core-am-social-network/src)
+Para probar la plataforma actual, se debe contar con acceso a internet e ingresar a la 
+[liga:](https://jetzable.github.io/cdmx-2018-06-bc-core-am-social-network/src)
  
 ##Colaboradoras
 
-[Aquí las ligas para direccionar a nuestros GitHub]
 
-[Palmidia Garay](https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
-[Vianey Lara](https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
-[Copelia Altamirano](https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
+[Palmidia Garay] (https://github.com/jetzable/cdmx-2018-06-bc-core-am-social-network)
 
-## Checklist
+[Vianey Lara] (https://github.com/ViniciaLaraRangel/cdmx-2018-06-bc-core-am-social-network)
 
-### General
+[Copelia Altamirano] (https://github.com/Copelia/cdmx-2018-06-bc-core-am-social-network)
 
-* [ ] Producto final sigue los lineamientos del diseño.
-
-### `README.md`
-
-* [x] Definición del producto.
-* [x] Benchamark de las principales redes sociales.
-* [ ] Resumen de entrevistas con usuarios.
-* [x] Link/screenshots prototipo de alta fidelidad.
-* [ ] Conclusiones de pruebas del prototipo con usuarios.
-* [ ] Conclusiones de pruebas con el producto en HTML.
-
-### Pruebas / tests
-
-* [ ] Tests unitarios cubren un mínimo del 70% de statements, functions, lines,
-  y branches.
-* [ ] Pasa tests (y linters) (`yarn test`).
-
-### Creación de cuenta (sign up)
-
-* [x] Permite crear cuenta.
-* [x] Valida email.
-* [x] Valida password.
-* [x] Muestra mensajes de error.
-
-### Inicio de sesión (sign in)
-
-* [x] Permite iniciar sesión.
-* [x] Valida email.
-* [x] Valida password.
-* [x] Muestra mensajes de error.
-
-### Muro (wall/feed)
-
-* [x] Muestra _muro_.
-* [x] Permite publicar nuevos posts.
-* [x] Permite eliminar posts.
-* [ ] Pide confirmación antes de borrar posts.
-* [x] Permite editar posts (in place).
-* [ ] Permite filtrar posts por público/amigos.
-* [x] Permite marcar posts como _gustados_ (like).
