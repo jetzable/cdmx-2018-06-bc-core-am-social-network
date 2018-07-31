@@ -26,7 +26,7 @@ const profilePopover = (user) => {
       placement: 'top',
       html: true,
       _content: `<div class="card text-center my-2"><div class="card-header">
-      <h5 class="card-title">NOMBRE ${user.displayName}</h5></div>
+      <h5 class="card-title">NOMBRE- ${user.displayName}</h5></div>
       <a><img class="card-img-top user-image my-3" src="../images/userImage.png"></a><div class="card-body">
       <h7 class="card-title"><p class="card-text">${user.email}</p></h7>
       <h7 class="card-title"><p class="card-text">COLONIA</p></h7>
