@@ -136,6 +136,9 @@ El boilerplate de este proyecto contiene la siguiente estructura de archivos, as
 
 Carpetas
 
+
+```text
+
 ./
 ├── .editorconfig
 ├── .eslintrc
@@ -157,7 +160,7 @@ Carpetas
 └── ux
     └── README.md
     └──images
-
+´´´ 
 
 ##¿Cómo hacer Sign up/Log in en nuestra red social?
 
