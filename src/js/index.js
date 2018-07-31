@@ -205,28 +205,6 @@ window.verifyLoginUser = () => {
   });
 };
 
-// Agregando funcionalidad de popover para información de usuario
-window.addingProfilePopover = () => {
-  const displayName = '';
-  const email = '';
-  const photoURL = '';
-  const userDinamic = firebase.auth().currentUser;
-  if (userDinamic !== null) {
-    displayName = userDinamic.displayName;
-    email = userDinamic.mail;
-    photoURL = user.photoURL;
-    console.log(email);
-  } else {
-    console.log('usuario vacio');
-  }
-
-  const profileButton = document.getElementById('popover-button');
-  const printProfileButton = `<button class="nav-link no-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="${displayName}">
-      <span class="sr-only">(current)</span>
-      <i class="fas fa-user px-3" title="Perfil"></i>
-      </button>`;
-  profileButton.innerHTML = printProfileButton;
-};
 
 window.addingDataToNewsfeed = (input) => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -392,9 +370,3 @@ window.savePostEdition = (postId) => {
         });
     });
 };
-
-// window.updateInRealTime = () => {
-//   let printedPosts = document.getElementById('list-post');
-//   const dbRef = firebase.database().ref().child('printedPosts');
-//   dbRef.onSnapshot(snap => printedPosts.innerHTML = snap.val());
-// };  
