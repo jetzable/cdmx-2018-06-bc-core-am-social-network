@@ -22,3 +22,4 @@ También tendrás la opción de iniciar sesión a través de otras redes sociale
 La interfaz en tu muro te permitirá publicar nuevos posts, editarlos y/o eliminarlos, si por error presionas alguno de estos botones, no te preocupes, siempre habrá un mensaje para confirmar la acción.
 El programa te permitirá darle like/"Me apetece" a las publicaciones que más te gusten.
 Encontrarás una barra de menú con cuatro diferentes iconos: Perfil, Amigos, "Me apetece" y el Log Out.
+¡Esperamos que la disfrutes!
