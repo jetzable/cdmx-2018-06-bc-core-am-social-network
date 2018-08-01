@@ -295,7 +295,6 @@ window.likePost = (postId) => {
           likes: newLike
         });
       }
-      console.log(newLike);
       printUserPost();
     })
     .catch((error) => {
